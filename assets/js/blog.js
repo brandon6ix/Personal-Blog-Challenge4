@@ -1,15 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     const postsContainer = document.getElementById('postsContainer');
     const backButton = document.getElementById('backButton');
-    const modeToggle = document.getElementById('modeToggle');
+   
 
     backButton.addEventListener('click', function() {
         window.location.href = 'index.html';
     });
 
-    modeToggle.addEventListener('change', function() {
-        document.body.classList.toggle('dark-mode');
-    });
 
     const posts = JSON.parse(localStorage.getItem('posts')) || [];
     if (posts.length > 0) {
